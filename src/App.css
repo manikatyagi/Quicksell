@@ -1,38 +1,146 @@
-.App {
-  text-align: center;
+body{
+  background-color:#f6f4f4;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.display{
+  background-color: white;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.card-container {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: space-evenly;
+  margin: 10px 30px;
+
 }
 
-.App-link {
-  color: #61dafb;
+.tag{
+  display: inline;
+  border: 2px solid rgba(128, 128, 128, 0.319);
+  border-radius: 5px;
+  padding-inline: 7px;
+  padding-block: 5px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.light{
+  color:#6c6b6b;
+}
+.title{
+  font-weight:bold;
+}
+.card {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 10px;
+  width: 290px;
+  height: 170px;
+  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.2);
+  background-color: #fff;
+  
+}
+.custom-dropdown {
+  position: relative;
+  display: inline-block;
+  margin-right: 20px; 
+}
+
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 150px; 
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  margin-top: 10px; 
+}
+
+.dropdown-content label {
+  display: block;
+  padding: 5px 10px;
+  font-weight: bold;
+  color: #333; 
+}
+
+.dropdown-content select {
+  display: block;
+  width: 100%;
+  padding: 8px 10px;
+  margin: 5px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.custom-dropdown:hover .dropdown-content {
+  display: block;
+}
+.display {
+  position: relative;
+  padding-inline: 30px;
+  padding-block: 20px;
+  box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.1);
+}
+
+.display-button {
+  padding: 8px 12px;
+  font-size: 15px;
+
+  border: 1px solid grey;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.dropdowns-wrapper {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 10px;
+}
+
+.dropdowns-wrapper.show-dropdowns {
+  display: block;
+}
+
+.dropdown {
+  margin-top: 10px;
+  
+}
+
+label {
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+select {
+  padding: 8px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  width: 150px;
+  margin-left: 50px;
+}
+
+/* Phones */
+@media (max-width: 767px) {
+
+  .card{
+    width: 90%;
   }
-  to {
-    transform: rotate(360deg);
+  
+  .card-container {
+    display: flex;
+     flex-direction: column;
+     
+   }
+}
+
+
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .card {
+    width: calc(50% - 20px); 
+   
   }
 }
